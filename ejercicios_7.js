@@ -6,18 +6,9 @@
 
 let arr = [4, 5, 3, 6, 9];
 
-function find(arr, callback) {
-    for (let i = 0; i < arr.length; i++) {
-        if (callback(arr[i])) {
-            return arr[i];
-        }
-    }
-    return undefined;
+function posicion(numero) {
+  return numero % 2 === 0
 }
+let mostrar = arr.find(posicion)
 
-function multiplo(elemento) {
-    return elemento % 3 === 0;
-}
-
-let resultado = find(arr, multiplo);
-console.log(resultado);
+console.log(mostrar)
